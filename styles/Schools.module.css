@@ -1,0 +1,10 @@
+.schoolsContainer {
+    display: flex;
+    text-align: center;
+}
+
+.showOnMapOption {
+    margin: 10px 5px 0 0 ;
+    text-align: right;
+
+}

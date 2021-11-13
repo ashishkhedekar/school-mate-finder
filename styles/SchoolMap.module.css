@@ -1,0 +1,17 @@
+.exitMap {
+    position: absolute;
+    z-index: 10;
+    top: 7rem;
+    left: 40px;
+    background: #b2b2b2;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.exitMap span {
+    margin: 0 5px;
+}
+
+.mapdiv {
+    /*position: absolute;*/
+}

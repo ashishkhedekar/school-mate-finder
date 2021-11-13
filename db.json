@@ -1,0 +1,70 @@
+{
+  "schools": [
+    {
+      "id": "1",
+      "name": "QE Barnet Boys",
+      "description": "Number one school in England",
+      "image": "/QEBuildingBunting.jpg",
+      "timesRanking" : 1,
+      "coordinates": {
+        "lat": 51.65586,
+        "lng": -0.21
+      },
+      "residents": [{
+        "id": 1,
+        "distance": "2.1 Miles",
+        "name": "Mr. John Lewis",
+        "numberOfKidsGoingToSchool" : 2,
+        "transportation": ["Car", "Public Transport"],
+        "coordinates" : {
+          "lat": 51.65729,
+          "lng": -0.13527
+        }
+      }, {
+        "id": 2,
+        "distance": "3.1 Miles",
+        "name": "Mr. Lee Chi",
+        "numberOfKidsGoingToSchool" : 1,
+        "transportation": ["Car"],
+        "coordinates" : {
+          "lat":51.66800,
+          "lng":-0.13300
+        }
+      }]
+    },
+    {
+      "id": "2",
+      "name": "St Olaves",
+      "description": "Number six school in England",
+      "image": "/st-olaves.jpg",
+      "timesRanking" : 6,
+      "coordinates": {
+        "lat": 51.36730,
+        "lng": 0.10425
+      },
+      "residents": [{
+        "id": 1,
+        "distance": "1 Miles",
+        "name": "Mr. Naresh Raut",
+        "numberOfKidsGoingToSchool" : 2,
+        "transportation": ["Car"],
+        "coordinates" : {
+          "lat": 51.65729,
+          "lng": -0.13527
+        }
+      }, {
+        "id": 2,
+        "distance": "1.4 Miles",
+        "name": "Mr. Ramiz Raza",
+        "numberOfKidsGoingToSchool" : 1,
+        "transportation": ["Car"],
+        "coordinates" : {
+          "lat": 51.66800,
+          "lng": -0.13300
+        }
+      }]
+    }
+  ]
+
+
+}
