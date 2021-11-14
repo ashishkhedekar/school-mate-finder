@@ -2,6 +2,7 @@ import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import SchoolMap from "../../../components/schoolMap";
 import styles from "../../../styles/Map.module.css"
+import ResidentsDetails from "../../../components/residentsDetails";
 
 const Map = () => {
 
@@ -30,20 +31,7 @@ const Map = () => {
 
   return <div className={styles.maps_outer_container}>
     <SchoolMap school={school}/>
-    <div className={styles.school_list}>
-      {school.residents.map(resident => {
-        return <div key={resident.id} className={styles.resident_details}>
-          <div>
-            {resident.id} - {resident.name} - {resident.distance}
-          </div>
-          <div>
-            Number of Children going to school - {resident.numberOfKidsGoingToSchool}
-          </div>
-          <hr/>
-
-        </div>
-      })}
-    </div>
+    <ResidentsDetails residents={school.residents}/>
   </div>
 }
 

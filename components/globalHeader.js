@@ -8,14 +8,14 @@ const GlobalHeader = () => {
           <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'>
             <li>
               <Link href="/schools">
-                <a href='#' className='nav-link px-2 text-secondary'>
+                <a href='#' className='nav-link px-2 text-white'>
                   Schools
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/schools/maps">
-                <a className='nav-link px-2 text-white'>
+                <a className='nav-link px-2 text-secondary'>
                   Maps
                 </a>
               </Link>

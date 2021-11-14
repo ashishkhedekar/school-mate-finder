@@ -7,11 +7,7 @@ const options = {
 }
 
 const schoolMarker = {
-  icon: "/red-dot.png"
-}
-
-const residentMarker = {
-  icon: "/blue-dot.png"
+  icon: "/school.png"
 }
 
 const SchoolGoogleMaps = ({center, markers}) => {
@@ -29,15 +25,25 @@ const SchoolGoogleMaps = ({center, markers}) => {
                     zoom={10}
                     center={center}
                     options={options}>
-    {markers.map(marker => (
-      <Marker
-        key={marker.id}
-        position={marker.coordinates}
-        ico
-        options={marker.isSchool ? schoolMarker : residentMarker}>
-      </Marker>))}
+    {markers.map(marker => {
+        if (marker.isSchool)
+        {
+          return (<Marker
+            key={marker.id}
+            position={marker.coordinates}
+            options={schoolMarker}>
+          </Marker>)
+        }
+        else
+        {
+          return (<Marker
+            key={marker.id}
+            label={""+marker.id}
+            position={marker.coordinates}
+          />)
+        }
+    })}
   </GoogleMap>
-
 }
 
 export default SchoolGoogleMaps;
