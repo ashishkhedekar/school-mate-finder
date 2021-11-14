@@ -15,7 +15,6 @@
         "distance": "2.1 Miles",
         "name": "Mr. John Lewis",
         "numberOfKidsGoingToSchool" : 2,
-        "isVerified" : true,
         "transportation": ["Car", "Public Transport"],
         "coordinates" : {
           "lat": 51.65729,
@@ -26,6 +25,7 @@
         "distance": "3.1 Miles",
         "name": "Mr. Lee Chi",
         "numberOfKidsGoingToSchool" : 1,
+        "isVerified" : true,
         "transportation": ["Car"],
         "coordinates" : {
           "lat":51.66800,
