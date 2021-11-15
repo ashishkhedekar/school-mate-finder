@@ -1,14 +1,14 @@
 import styles from "../styles/Residents.module.css";
 import ResidentDetails from "./residentDetails";
-import {useState} from "react";
-
+import {useContext, useState} from "react";
+import SchoolMapContext from "../contexts/SchoolMapContext";
 
 const ResidentsDetails = ({residents}) => {
 
-  const [showOnlyVerifiedUser, setShowOnlyVerifiedUser] = useState(false);
+  const { showOnlyVerifiedUsers, setShowOnlyVerifiedUsers } = useContext(SchoolMapContext);
 
   const handleCheckboxChange = (e) => {
-    setShowOnlyVerifiedUser(e.target.checked)
+    setShowOnlyVerifiedUsers(e.target.checked)
   }
 
   return <>
@@ -23,14 +23,13 @@ const ResidentsDetails = ({residents}) => {
       </div>
       <div className={styles.school_list}>
         {residents
-          .filter(resident => !showOnlyVerifiedUser || (showOnlyVerifiedUser && resident.isVerified))
-          .map(resident => {
-          return (<ResidentDetails key={resident.id} resident={resident}/>)
+          .filter(resident => !showOnlyVerifiedUsers || (showOnlyVerifiedUsers && resident.isVerified))
+          .map((resident, index) => {
+          return (<ResidentDetails key={index} index={index+1} resident={resident}/>)
         })}
       </div>
     </div>
   </>
-
 }
 
 export default ResidentsDetails

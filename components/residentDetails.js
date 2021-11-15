@@ -2,12 +2,12 @@ import styles from "../styles/Resident.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import { faCertificate } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
-const ResidentDetails = ({resident}) => {
+const ResidentDetails = ({resident, index}) => {
 
   return <>
     <div key={resident.id} className={styles.resident_details}>
       <div className={styles.resident_index}>
-        {resident.id}
+        {index}
       </div>
       <div className={styles.resident_name_and_stuff}>
         <div>
@@ -22,10 +22,8 @@ const ResidentDetails = ({resident}) => {
       </div>
     </div>
     <div className={styles.resident_separator}>
-
     </div>
   </>
-
 }
 
 export default ResidentDetails

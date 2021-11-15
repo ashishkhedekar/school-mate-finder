@@ -1,16 +1,21 @@
 import SchoolGoogleMaps from "./schoolGoogleMaps";
 import styles from "../styles/SchoolMap.module.css"
 import Link from 'next/link'
+import {useContext} from "react";
+import SchoolMapContext from "../contexts/SchoolMapContext";
 
 const SchoolMap = (school) => {
 
   const {coordinates, residents} = school.school;
   const numberOfResidents = residents.length;
+  const { showOnlyVerifiedUsers } = useContext(SchoolMapContext);
 
-  const markers = residents.map(resident => {
-    const {id, coordinates} = resident;
+  const markers = residents
+    .filter(resident => !showOnlyVerifiedUsers || (showOnlyVerifiedUsers && resident.isVerified))
+    .map((resident, index) => {
+    const {coordinates} = resident;
     return {
-      id,
+      id: index+1,
       coordinates,
       isSchool: false
     }
