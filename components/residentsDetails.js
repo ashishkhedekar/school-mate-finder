@@ -1,6 +1,6 @@
 import styles from "../styles/Residents.module.css";
 import ResidentDetails from "./residentDetails";
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import SchoolMapContext from "../contexts/SchoolMapContext";
 
 const ResidentsDetails = ({residents}) => {
@@ -19,7 +19,7 @@ const ResidentsDetails = ({residents}) => {
           <div className="verifiedUserSelectorSlider"/>
           <label className="verifiedUserSelector" htmlFor="userSelector"/>
         </div>
-        <p>Show only verified </p>
+        <p>Verified Parents Only </p>
       </div>
       <div className={styles.school_list}>
         {residents

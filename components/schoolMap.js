@@ -17,13 +17,14 @@ const SchoolMap = (school) => {
     return {
       id: index+1,
       coordinates,
-      isSchool: false
+      isSchool: false,
+      name: resident.name
     }
   })
   markers.push({
     id: numberOfResidents + 1,
     coordinates,
-    isSchool: true
+    isSchool: true,
   })
 
   return <>

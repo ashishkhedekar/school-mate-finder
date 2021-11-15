@@ -1,5 +1,6 @@
-import {GoogleMap, Marker, useLoadScript} from "@react-google-maps/api";
+import {GoogleMap, InfoWindow, Marker, useLoadScript} from "@react-google-maps/api";
 import styles from "../styles/SchoolGoogleMaps.module.css"
+import {useState} from "react";
 
 const options = {
   disableDefaultUI: true,
@@ -12,6 +13,7 @@ const schoolMarker = {
 
 const SchoolGoogleMaps = ({center, markers}) => {
 
+  const [residentSelected, setResidentSelected] = useState(null)
   const libraries = ["places"];
   const {isLoaded, loadError} = useLoadScript({
     googleMapsApiKey: '',
@@ -22,7 +24,7 @@ const SchoolGoogleMaps = ({center, markers}) => {
   if (!isLoaded) return "Loading..."
 
   return <GoogleMap mapContainerClassName={styles.mapContainerStyle}
-                    zoom={10}
+                    zoom={11}
                     center={center}
                     options={options}>
     {markers.map(marker => {
@@ -31,7 +33,11 @@ const SchoolGoogleMaps = ({center, markers}) => {
           return (<Marker
             key={marker.id}
             position={marker.coordinates}
-            options={schoolMarker}>
+            options={schoolMarker}
+            onClick={() => {
+              setResidentSelected(marker)
+            }}
+          >
           </Marker>)
         }
         else
@@ -40,9 +46,25 @@ const SchoolGoogleMaps = ({center, markers}) => {
             key={marker.id}
             label={""+marker.id}
             position={marker.coordinates}
+            onClick={() => {
+              setResidentSelected(marker)
+            }}
           />)
         }
     })}
+    {
+      residentSelected ? (<InfoWindow position={residentSelected.coordinates} onCloseClick={() => setResidentSelected(null)}>
+          <div>
+            <p>
+              {residentSelected.name}
+            </p>
+            <p>
+              Year 9, 10
+            </p>
+          </div>
+        </InfoWindow>
+        ) : null
+    }
   </GoogleMap>
 }
 
