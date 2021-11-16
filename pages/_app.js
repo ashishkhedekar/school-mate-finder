@@ -1,6 +1,6 @@
 import GlobalHeader from "../components/globalHeader";
-import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css';
+import "/styles/header.css"
 import '../styles/registeredUserSelectorSlider.css';
 import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
 import { config } from "@fortawesome/fontawesome-svg-core";

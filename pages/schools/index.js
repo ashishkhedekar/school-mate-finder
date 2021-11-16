@@ -27,18 +27,20 @@ const Schools = () => {
   }
 
   return <>
-    <div className={styles.showOnMapOption}>
-      <button><Link href="/schools/maps">Show on map </Link></button>
-    </div>
-    <div className={styles.schoolsContainer}>
-      {schools.map(school => {
-        return (<SchoolCard key={school.id}
-                            id={school.id}
-                            name={school.name}
-                            timesRanking={school.timesRanking}
-                            image={school.image}
-                            residents={school.residents}/>)
-      })}
+    <div className={styles.schoolsOuterContainer}>
+      <div className={styles.showOnMapOption}>
+        <button><Link href="/schools/maps ">Show on map </Link></button>
+      </div>
+      <div className={styles.schoolCardsContainer}>
+        {schools.map(school => {
+          return (<SchoolCard key={school.id}
+                              id={school.id}
+                              name={school.name}
+                              timesRanking={school.timesRanking}
+                              image={school.image}
+                              residents={school.residents}/>)
+        })}
+      </div>
     </div>
   </>
 

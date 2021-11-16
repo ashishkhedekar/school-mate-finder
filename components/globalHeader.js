@@ -1,39 +1,26 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import siteLogo from '../public/site_logo.png'
 
 const GlobalHeader = () => {
   return (
-    <header className='p-3 bg-dark text-white'>
-      <div className='container'>
-        <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
-          <ul className='nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0'>
-            <li>
-              <Link href="/schools">
-                <a href='#' className='nav-link px-2 text-white'>
-                  Schools
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/schools/maps">
-                <a className='nav-link px-2 text-secondary'>
-                  Maps
-                </a>
-              </Link>
-
-            </li>
+    <div className="header">
+      <nav>
+        <div className="logo-links-container">
+          <Link href="/schools">
+            <Image src={siteLogo} alt="School" width={200} height={200} className="siteLogo"/>
+          </Link>
+          <ul className="navLinks">
+            <li><Link href="/schools"><a href="">Schools</a></Link></li>
+            <li><Link href="/schools/maps"><a href="">Map</a></Link></li>
+            <li><a href="">Reviews</a></li>
           </ul>
-
-          <div className='text-end'>
-            <button type='button' className='btn btn-outline-light me-2'>
-              Login
-            </button>
-            <Link href="/registration">
-              <button type='button' className='btn btn-warning'>Sign-up</button>
-            </Link>
-          </div>
         </div>
-      </div>
-    </header>
+        <ul className="navLinks">
+          <li className='btn'>Login</li>
+        </ul>
+      </nav>
+    </div>
   )
     ;
 };

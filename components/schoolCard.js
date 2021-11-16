@@ -12,23 +12,21 @@ const SchoolCard = ({id, name, timesRanking, image, residents}) => {
         <p>Number of residents : <strong>{numberOfResidents}</strong></p>
          <div className={styles.control}>
            <Link href={schoolUrl}>
-           <button className={styles.btn}>
-             <span className={styles.price}>See</span>
-             <span className={styles.buy}>School Friends</span>
-           </button>
+           {/*<button className="btn">School Friends</button>*/}
+             <button className={styles.btn}>
+               <span className={styles.text}>School Friends</span>
+             </button>
            </Link>
          </div>
       </div>
       <div className={styles.schoolImage}>
         <img
           src={image}
-          alt=""
+          alt={name}
         />
-
       </div>
     </div>
   </>
-
 }
 
 export default SchoolCard;

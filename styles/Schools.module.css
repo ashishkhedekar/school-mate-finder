@@ -1,4 +1,11 @@
-.schoolsContainer {
+.schoolsOuterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 280px;
+}
+
+.schoolCardsContainer {
     display: flex;
     text-align: center;
 }
