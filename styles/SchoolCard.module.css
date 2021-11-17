@@ -6,20 +6,22 @@
     overflow: hidden;
     margin: 1em 0.5em;
     height: 250px;
-    width: 50%;
+    width: 40vw;
+    min-width: 40vw;
+    border: 1px solid red;
 }
 
-.productDetails {
+.schoolDetails {
     position: relative;
     text-align: center;
     overflow: hidden;
     padding: 30px;
     height: 100%;
     float: left;
-    width: 40%;
+    width: 50%;
 }
 
-.container .productDetails h1 {
+.container .schoolDetails h1 {
     font-family: "Bebas Neue", cursive;
     display: inline-block;
     position: relative;
@@ -28,7 +30,7 @@
     margin: 0;
 }
 
-.container .productDetails h1:before {
+.container .schoolDetails h1:before {
     position: absolute;
     content: "";
     right: 0%;
@@ -45,7 +47,7 @@
     animation: chan-sh 6s ease infinite;
 }
 
-.container .productDetails > p {
+.container .schoolDetails > p {
     font-family: "EB Garamond", serif;
     text-align: center;
     font-size: 18px;
@@ -98,7 +100,7 @@
     overflow: hidden;
     height: 100%;
     float: right;
-    width: 45%;
+    width: 50%;
 }
 
 .container img {

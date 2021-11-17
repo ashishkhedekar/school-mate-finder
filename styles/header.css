@@ -35,7 +35,7 @@ nav {
 
 .navLinks li a {
     text-decoration: none;
-    color: #082F39FF;
+    color: #2b6777;
     padding: 5px 0;
     position: relative;
     font-size: 19px;
@@ -58,7 +58,7 @@ nav {
 }
 
 .btn {
-    background-color: rgba(8, 47, 57, 1);
+    background-color: #2b6777;
     color: #fff;
     padding: 10px 30px;
     cursor: pointer;

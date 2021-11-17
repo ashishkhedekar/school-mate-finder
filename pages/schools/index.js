@@ -27,10 +27,6 @@ const Schools = () => {
   }
 
   return <>
-    <div className={styles.schoolsOuterContainer}>
-      <div className={styles.showOnMapOption}>
-        <button><Link href="/schools/maps ">Show on map </Link></button>
-      </div>
       <div className={styles.schoolCardsContainer}>
         {schools.map(school => {
           return (<SchoolCard key={school.id}
@@ -41,7 +37,6 @@ const Schools = () => {
                               residents={school.residents}/>)
         })}
       </div>
-    </div>
   </>
 
 }
