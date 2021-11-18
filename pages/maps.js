@@ -1,5 +1,5 @@
 import React from 'react'
-import SchoolsOnGoogleMap from "../components/SchoolsOnGoogleMap";
+import SchoolsOnGoogleMap from "../components/schoolsOnGoogleMap";
 
 function Map() {
   return <div>

@@ -1,8 +1,9 @@
-.resident_details {
+.parent_details {
     margin: 10px 0 0 5px;
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    border: 1px solid orange;
 }
 
 .resident_index {
@@ -18,7 +19,7 @@
     font: 24px;
 }
 
-.resident_name_and_stuff {
+.parent_name_and_stuff {
     margin: 0 12px 12px 12px;
 }
 

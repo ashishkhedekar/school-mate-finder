@@ -2,7 +2,7 @@ import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import SchoolMap from "../../../components/schoolMap";
 import styles from "../../../styles/Map.module.css"
-import ResidentsDetails from "../../../components/residentsDetails";
+import ParentsDetails from "../../../components/parentsDetails";
 
 const Map = () => {
 
@@ -31,7 +31,7 @@ const Map = () => {
 
   return <div className={styles.maps_outer_container}>
     <SchoolMap school={school}/>
-    <ResidentsDetails residents={school.residents}/>
+    <ParentsDetails parents={school.residents}/>
   </div>
 }
 
