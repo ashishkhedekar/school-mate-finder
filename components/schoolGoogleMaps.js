@@ -24,7 +24,7 @@ const SchoolGoogleMaps = ({center, markers}) => {
   if (!isLoaded) return "Loading..."
 
   return <GoogleMap mapContainerClassName={styles.mapContainerStyle}
-                    zoom={11}
+                    zoom={13}
                     center={center}
                     options={options}>
     {markers.map(marker => {
@@ -37,6 +37,7 @@ const SchoolGoogleMaps = ({center, markers}) => {
             onClick={() => {
               setResidentSelected(marker)
             }}
+            zIndex={100}
           >
           </Marker>)
         }

@@ -1,4 +1,4 @@
 .maps_outer_container {
     display: flex;
-    border: 1px solid #2b6777;
+    border: 1px solid var(--primary-color);
 }

@@ -3,9 +3,11 @@
     z-index: 10;
     top: 7rem;
     left: 40px;
-    background: #b2b2b2;
+    background: #fDfDfD;
+    padding: 4px;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 4px;
+    color: var(--primary-color);
 }
 
 .exitMap span {

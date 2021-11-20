@@ -46,7 +46,7 @@
 }
 
 .verifiedUserSelector input:checked + .verifiedUserSelectorSlider {
-    background: #109afb;
+    background: var(--primary-color);
 }
 
 .verifiedUserSelector input:checked + .verifiedUserSelectorSlider:after {
@@ -55,4 +55,31 @@
 
 .hideMoreItems {
     visibility: hidden;
+}
+
+/** Load more button styles **/
+
+.showMoreItemsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showMoreItems {
+    font-size: 1rem;
+    padding: 10px 50px;
+    margin: 15px 0;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 10%), 0 5px 5px 0 rgb(0 0 0 / 10%);
+    background-color: #f2f2f2;
+    border: var(--primary-color) 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.showMoreItems:hover {
+    background-color: rgba(43, 103, 119, 0.8);
+    box-shadow: none;
+    color: #f2f2f2;
+    transition: 0.4s ease;
 }

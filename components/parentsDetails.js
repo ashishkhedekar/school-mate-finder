@@ -18,7 +18,7 @@ const ParentsDetails = ({parents}) => {
   }
 
   return <>
-    <div className={styles.resident_containers}>
+    <div className={styles.parent_containers}>
       <div className="verifiedUserSelectorContainer">
         <div className="verifiedUserSelector">
           <input type="checkbox" id="userSelector" onChange={e => handleCheckboxChange(e)}/>
@@ -35,7 +35,7 @@ const ParentsDetails = ({parents}) => {
             return (<ParentDetails key={index} index={index + 1} parent={parent}/>)
           })}
       </div>
-      <div>
+      <div className="showMoreItemsContainer">
         <button className={`${moreItems ? `showMoreItems` : `hideMoreItems`}`} onClick={handleShowMore}>Load More
         </button>
       </div>
