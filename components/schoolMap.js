@@ -4,13 +4,15 @@ import Link from 'next/link'
 import {useContext} from "react";
 import SchoolMapContext from "../contexts/SchoolMapContext";
 
-const SchoolMap = (school) => {
+const SchoolMap = ({school, numberOfVisibleParents}) => {
 
-  const {coordinates, residents} = school.school;
+  console.log(" numberOfVisibleParents >>>>> " + JSON.stringify(numberOfVisibleParents));
+  const {coordinates, residents} = school;
   const numberOfResidents = residents.length;
   const { showOnlyVerifiedUsers } = useContext(SchoolMapContext);
 
   const markers = residents
+    .slice(0, numberOfVisibleParents)
     .filter(resident => !showOnlyVerifiedUsers || (showOnlyVerifiedUsers && resident.isVerified))
     .map((resident, index) => {
     const {coordinates} = resident;

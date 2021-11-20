@@ -1,9 +1,10 @@
 .verifiedUserSelectorContainer {
     display: flex;
+    align-items: center;
 }
 
 .verifiedUserSelectorContainer p {
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 .verifiedUserSelector {
@@ -11,7 +12,8 @@
     display: block;
     width: 60px;
     height: 30px;
-    margin-bottom: 11px;
+    margin: 10px 11px;
+    cursor: pointer;
     /*border: 2px solid green;*/
 }
 
@@ -49,4 +51,8 @@
 
 .verifiedUserSelector input:checked + .verifiedUserSelectorSlider:after {
     transform: translateX(30px);
+}
+
+.hideMoreItems {
+    visibility: hidden;
 }

@@ -11,9 +11,10 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 function MyApp({Component, pageProps}) {
 
   const [showOnlyVerifiedUsers, setShowOnlyVerifiedUsers] = useState(false)
+  const [numberOfVisibleParents, setNumberOfVisibleParents] = useState(5)
 
   return <>
-    <SchoolMapContext.Provider value={{showOnlyVerifiedUsers, setShowOnlyVerifiedUsers}}>
+    <SchoolMapContext.Provider value={{showOnlyVerifiedUsers, setShowOnlyVerifiedUsers, numberOfVisibleParents, setNumberOfVisibleParents}}>
       <GlobalHeader/>
       <Component {...pageProps} />
     </SchoolMapContext.Provider>

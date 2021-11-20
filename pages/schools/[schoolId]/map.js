@@ -1,8 +1,9 @@
 import {useRouter} from "next/router";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import SchoolMap from "../../../components/schoolMap";
 import styles from "../../../styles/Map.module.css"
 import ParentsDetails from "../../../components/parentsDetails";
+import SchoolMapContext from "../../../contexts/SchoolMapContext";
 
 const Map = () => {
 
@@ -10,6 +11,7 @@ const Map = () => {
   const {schoolId} = router.query;
   const [isLoading, setIsLoading] = useState(true)
   const [school, setSchool] = useState(null);
+  const {numberOfVisibleParents, setNumberOfVisibleParents} = useContext(SchoolMapContext);
 
   useEffect(() => {
     let isSubscribed = true;
@@ -30,7 +32,7 @@ const Map = () => {
   }
 
   return <div className={styles.maps_outer_container}>
-    <SchoolMap school={school}/>
+    <SchoolMap school={school} numberOfVisibleParents={numberOfVisibleParents}/>
     <ParentsDetails parents={school.residents}/>
   </div>
 }

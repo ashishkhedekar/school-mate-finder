@@ -1,9 +1,9 @@
 import {createContext} from "react";
 
 const SchoolMapContext = createContext({
-  showOnlyVerifiedUsers: false,
-  setShowOnlyVerifiedUsers : () => {}
-
+  showOnlyVerifiedUsers: true,
+  setShowOnlyVerifiedUsers : () => {},
+  numberOfVisibleParents: 5,
 });
 
 export default SchoolMapContext
