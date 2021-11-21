@@ -30,11 +30,13 @@ const SchoolMap = ({school, numberOfVisibleParents}) => {
   })
 
   return <>
-    <div className={styles.exitMap}>
-      <Link href="/schools"><span>← Exit map </span></Link>
-    </div>
-    <div className={styles.mapdiv}>
-      <SchoolGoogleMaps center={coordinates} markers={markers}/>
+    <div className="maps_container">
+      <div className={styles.exitMap}>
+        <Link href="/schools"><span>← Exit map </span></Link>
+      </div>
+      <div className={styles.mapdiv}>
+        <SchoolGoogleMaps center={coordinates} markers={markers}/>
+      </div>
     </div>
   </>
 }

@@ -5,8 +5,12 @@
 }
 
 .parent_containers {
-    margin: 10px 5px;
+    margin: 10px 12px;
     width: -webkit-fill-available;
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 10%), 0 5px 5px 0 rgb(0 0 0 / 10%);
+    overflow-y: scroll;
+    /*border: 1px solid var(--primary-color);*/
 }
 
 /*.registeredUserSelector {*/

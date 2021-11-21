@@ -4,7 +4,8 @@ import {useState} from "react";
 
 const options = {
   disableDefaultUI: true,
-  zoomControl: true
+  zoomControl: true,
+
 }
 
 const schoolMarker = {
@@ -26,7 +27,11 @@ const SchoolGoogleMaps = ({center, markers}) => {
   return <GoogleMap mapContainerClassName={styles.mapContainerStyle}
                     zoom={13}
                     center={center}
-                    options={options}>
+                    options={options}
+                    mapContainerStyle={{
+                      height: "88vh"
+                    }}
+                    >
     {markers.map(marker => {
         if (marker.isSchool)
         {
