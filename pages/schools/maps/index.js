@@ -11,7 +11,7 @@ const Index = () => {
 
   useEffect(() => {
     const fetchSchoolData = async () => {
-      const response = await fetch(`http://localhost:3004/schools`)
+      const response = await fetch(`${process.env.NEXT_SCHOOL_API_HOST}/schools`)
       const data = await response.json()
       setSchools(data)
       setIsLoading(false);

@@ -11,7 +11,7 @@ const Schools = () => {
   useEffect(() => {
     let isSubscribed = true;
     const fetchSchoolsData = async () => {
-      const response = await fetch(`http://localhost:3004/schools`)
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SCHOOL_API_HOST}/schools`)
       const data = await response.json()
       isSubscribed ? setSchools(data) : setSchools(null);
       setIsLoading(false);

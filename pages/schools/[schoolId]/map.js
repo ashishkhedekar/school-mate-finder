@@ -16,7 +16,7 @@ const Map = () => {
   useEffect(() => {
     let isSubscribed = true;
     const fetchSchoolData = async () => {
-      const response = await fetch(`http://localhost:3004/schools/${schoolId}`)
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SCHOOL_API_HOST}/schools/${schoolId}`)
       const data = await response.json()
       isSubscribed ? setSchool(data) : setSchool(null);
       setIsLoading(false);
