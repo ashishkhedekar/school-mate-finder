@@ -10,7 +10,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 100%;
+}
+
+.desktop-nav {
     margin: 0 13vw;
+}
+
+.mobile-nav {
+    margin: 0;
 }
 
 .logo-links-container {
@@ -18,7 +25,6 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
 
 .logo {
     width: 140px;

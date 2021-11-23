@@ -1,11 +1,22 @@
 import styles from "../styles/Parent.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
-import {faCertificate} from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+import {faCertificate} from "@fortawesome/free-solid-svg-icons";
+import {useContext} from "react";
+import SchoolMapContext from "../contexts/SchoolMapContext"; // import the icons you need
+
+
 
 const ParentDetails = ({parent, index}) => {
 
+  const {setSelectedParentIdOnTheMap} = useContext(SchoolMapContext);
+
+  const handleParentSelection = (id) => {
+    console.log("WWW" + id);
+    setSelectedParentIdOnTheMap(id);
+  }
+
   return <>
-    <div key={parent.id} className={styles.parent_details}>
+    <div key={parent.id} className={styles.parent_details} onClick={() => handleParentSelection(parent.id)}>
       <div className={styles.parent_name_and_stuff}>
         <div className={styles.resident_index}>
           {index}

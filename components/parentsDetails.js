@@ -17,6 +17,10 @@ const ParentsDetails = ({parents}) => {
     setNumberOfVisibleParents(numberOfVisibleParents + 5);
   }
 
+  const handleParentsSelection = () => {
+    console.log("Parent selected ");
+  }
+
   return <>
     <div className={styles.parent_containers}>
       <div className="verifiedUserSelectorContainer">
@@ -27,7 +31,7 @@ const ParentsDetails = ({parents}) => {
         </div>
         <p>Verified Parents Only </p>
       </div>
-      <div className={styles.school_list}>
+      <div className={styles.school_list} onClick={() => handleParentsSelection}>
         {parents
           .slice(0, numberOfVisibleParents)
           .filter(parent => !showOnlyVerifiedUsers || (showOnlyVerifiedUsers && parent.isVerified))

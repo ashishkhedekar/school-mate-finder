@@ -6,7 +6,6 @@ import SchoolMapContext from "../contexts/SchoolMapContext";
 
 const SchoolMap = ({school, numberOfVisibleParents}) => {
 
-  console.log(" numberOfVisibleParents >>>>> " + JSON.stringify(numberOfVisibleParents));
   const {coordinates, residents} = school;
   const numberOfResidents = residents.length;
   const { showOnlyVerifiedUsers } = useContext(SchoolMapContext);

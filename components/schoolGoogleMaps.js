@@ -1,19 +1,22 @@
 import {GoogleMap, InfoWindow, Marker, useLoadScript} from "@react-google-maps/api";
 import styles from "../styles/SchoolGoogleMaps.module.css"
-import {useState} from "react";
+import {useContext, useState} from "react";
+import SchoolMapContext from "../contexts/SchoolMapContext";
 
 const options = {
   disableDefaultUI: true,
   zoomControl: true,
-
 }
 
 const schoolMarker = {
   icon: "/school.png"
 }
 
+
+
 const SchoolGoogleMaps = ({center, markers}) => {
 
+  const {selectedParentIdOnTheMap} = useContext(SchoolMapContext);
   const [residentSelected, setResidentSelected] = useState(null)
   const libraries = ["places"];
   const {isLoaded, loadError} = useLoadScript({
@@ -45,6 +48,22 @@ const SchoolGoogleMaps = ({center, markers}) => {
             zIndex={100}
           >
           </Marker>)
+        }
+        else if (marker.id === selectedParentIdOnTheMap)
+        {
+          return (<Marker
+            key={marker.id}
+            position={marker.coordinates}
+            options={{
+              icon: {
+                url: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                scaledSize: new google.maps.Size(60, 60),
+              }
+            }}
+            onClick={() => {
+              setResidentSelected(marker)
+            }}
+          />)
         }
         else
         {
