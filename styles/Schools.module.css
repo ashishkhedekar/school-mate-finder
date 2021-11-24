@@ -3,13 +3,21 @@
     text-align: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    /*border: 1px solid blue;*/
+    border: 1px solid blue;
     margin: 0 8vw;
+}
 
+.schoolCardsContainer_tablet {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid red;
+    margin: 0 4vw;
 }
 
 .showOnMapOption {
     margin: 10px 5px 0 0 ;
     text-align: right;
-
 }

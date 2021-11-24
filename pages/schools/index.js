@@ -1,12 +1,14 @@
 import SchoolCard from "../../components/schoolCard";
 import styles from "/styles/Schools.module.css"
 import {useEffect, useState} from "react";
-import Link from "next/link";
+import SchoolsContainer from "../../components/schoolsContainer";
+
 
 const Schools = () => {
 
   const [isLoading, setIsLoading] = useState(true)
   const [schools, setSchools] = useState([]);
+
 
   useEffect(() => {
     let isSubscribed = true;
@@ -27,16 +29,7 @@ const Schools = () => {
   }
 
   return <>
-      <div className={styles.schoolCardsContainer}>
-        {schools.map(school => {
-          return (<SchoolCard key={school.id}
-                              id={school.id}
-                              name={school.name}
-                              timesRanking={school.timesRanking}
-                              image={school.image}
-                              residents={school.residents}/>)
-        })}
-      </div>
+    <SchoolsContainer schools={schools}/>
   </>
 
 }

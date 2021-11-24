@@ -3,7 +3,7 @@ import Image from 'next/image'
 import siteLogo from '../public/site_logo.png'
 import {useMediaQuery} from "react-responsive";
 import {FaBars} from 'react-icons/fa';
-import {MdAccountCircle} from "react-icons/all";
+import {MdAccountCircle} from "react-icons/md";
 
 const Desktop = ({children}) => {
   const isDesktop = useMediaQuery({minWidth: 992 })
@@ -53,7 +53,6 @@ const GlobalHeader = () => {
         </div>
       </Mobile>
     </>
-  )
-    ;
+  );
 };
 export default GlobalHeader;
